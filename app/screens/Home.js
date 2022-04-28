@@ -3,6 +3,7 @@ import { Text, View, FlatList, SafeAreaView, StyleSheet } from "react-native";
 
 import { COLORS, NFTData } from "../constants";
 import { HomeHeader, NFTCard, AppStatusBar } from "../components";
+import colors from "../config/colors";
 
 function Home(props) {
   return (
@@ -12,11 +13,15 @@ function Home(props) {
         <View style={styles.subContainer2}>
           <FlatList
             data={NFTData}
-            renderItem={({ item }) => <Text>{item.name}</Text>}
+            renderItem={({ item }) => <NFTCard data={item} />}
             keyExtractor={(item) => item.id}
             showsVerticalScrollIndicator={false}
             ListHeaderComponent={<HomeHeader />}
           />
+        </View>
+        <View style={styles.backgroundScreen}>
+          <View style={{ height: 300, backgroundColor: colors.secondary }} />
+          <View style={{ flex: 1, backgroundColor: COLORS.white }} />
         </View>
       </View>
     </SafeAreaView>
@@ -32,6 +37,14 @@ const styles = StyleSheet.create({
   },
   subContainer1: { flex: 1 },
   subContainer2: { zIndex: 0 },
+  backgroundScreen: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    zIndex: -1,
+  },
 });
 
 export default Home;

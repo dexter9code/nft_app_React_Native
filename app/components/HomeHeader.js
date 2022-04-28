@@ -1,7 +1,8 @@
 import React from "react";
+import { Text } from "react-native";
 
 function HomeHeader(props) {
-  return null;
+  return <Text>HomeHeader</Text>;
 }
 
 export default HomeHeader;
