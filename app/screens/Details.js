@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
+import { Text } from "react-native";
 
-function Details(props) {
-    return (
-        <div>
-            
-        </div>
-    );
-}
+const Details = (props) => {
+  return <Text>details</Text>;
+};
 
 export default Details;

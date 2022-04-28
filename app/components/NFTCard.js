@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
 function NFTCard(props) {
-    return (
-        <div>
-            
-        </div>
-    );
+  return null;
 }
 
 export default NFTCard;
