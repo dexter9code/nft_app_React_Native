@@ -16,5 +16,7 @@ export default {
   blueDiamond: "#4EE2EC",
   nebulaGreen: "#59E817",
   blushRed: "#E56E94",
-  aquamarine: "##7FFD4",
+  aquamarine: "#7FFD4",
+  babyBlue: "#95B9C7",
+  denimBlue: "#38ACEC",
 };

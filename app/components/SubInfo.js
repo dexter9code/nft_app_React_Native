@@ -53,7 +53,7 @@ export const EthButton = ({ buttonWidth, fontSize, handlePress, ...props }) => {
     >
       <Text
         style={{
-          fontFamily: FONTS.semiBold,
+          fontFamily: FONTS.bold,
           fontSize: fontSize,
           color: colors.white,
           fontWeight:'400',
