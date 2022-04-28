@@ -11,4 +11,10 @@ export default {
   mintCream: "#F5FFFA",
   lightCyan: "#E0FFFF",
   grey: "#C9C9C9",
+  dodgerBlue: "#1E90FF",
+  cornFlowerBlue: "#6495ED",
+  blueDiamond: "#4EE2EC",
+  nebulaGreen: "#59E817",
+  blushRed: "#E56E94",
+  aquamarine: "##7FFD4",
 };
