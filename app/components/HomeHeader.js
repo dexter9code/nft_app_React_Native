@@ -22,7 +22,7 @@ function HomeHeader({ onSearch }) {
         </View>
       </View>
       <View style={{ marginVertical: SIZES.font }}>
-        <Text style={styles.nameText}>Hi Nikki 👋</Text>
+        <Text style={styles.nameText}>Hi,Nikki 👋</Text>
         <Text style={styles.subText}>Let's Find a MasterPiece ✨</Text>
       </View>
       <View style={{ marginTop: SIZES.font }}>
