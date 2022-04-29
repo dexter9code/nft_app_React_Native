@@ -5,6 +5,8 @@ import { useFonts } from "expo-font";
 import Home from "./app/screens/Home";
 import Details from "./app/screens/Details";
 import myTheme from "./app/navigation/navigationTheme";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import TestScreen from './app/screens/TestScreen';
 
 const Stack = createStackNavigator();
 
@@ -18,14 +20,17 @@ export default function App() {
   });
   if (!loaded) return null;
   return (
-    <NavigationContainer theme={myTheme}>
-      <Stack.Navigator
-        screenOptions={{ headerShown: false }}
-        initialRouteName="Home"
-      >
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Details} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    // <NavigationContainer theme={myTheme}>
+    //   <Stack.Navigator
+    //     screenOptions={{ headerShown: false }}
+    //     initialRouteName="Home"
+    //   >
+    //     <Stack.Screen name="Home" component={Home} />
+    //     <Stack.Screen name="Details" component={Details} />
+    //     <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
+    <WelcomeScreen/>
+  
   );
 }
