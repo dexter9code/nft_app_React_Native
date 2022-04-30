@@ -7,6 +7,7 @@ import Details from "./app/screens/Details";
 import myTheme from "./app/navigation/navigationTheme";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import TestScreen from './app/screens/TestScreen';
+import LoginScreen from "./app/screens/LoginScreen";
 
 const Stack = createStackNavigator();
 
@@ -30,7 +31,7 @@ export default function App() {
     //     <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
     //   </Stack.Navigator>
     // </NavigationContainer>
-    <WelcomeScreen/>
+    <LoginScreen />
   
   );
 }

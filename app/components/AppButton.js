@@ -4,11 +4,11 @@ import { StyleSheet, Pressable, Text } from "react-native";
 import colors from "../config/colors";
 import { SIZES } from "../constants";
 
-function AppButton({ title, onPress, style, color = "blushRed" }) {
+function AppButton({ title, onPress, style, borderRadius=0,color = "blushRed",...otherprops }) {
   return (
     <Pressable
       onPress={onPress}
-      style={[styles.container, { backgroundColor: colors[color] }]}
+      style={[styles.container, {borderRadius:borderRadius},{ backgroundColor: colors[color] },{...otherprops}]}
     >
       <Text style={style}>{title}</Text>
     </Pressable>
