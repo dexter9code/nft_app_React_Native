@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Image, ImageBackground, Text,Button ,StyleSheet,TouchableOpacity,Pressable } from "react-native";
+import { View, Image, ImageBackground, Text, StyleSheet } from "react-native";
+
 import AppButton from "../components/AppButton";
 import colors from "../config/colors";
-
 import { FONTS, SIZES } from "../constants";
 
-function WelcomeScreen({navigation}) {
+function WelcomeScreen({ navigation }) {
   return (
     <ImageBackground
       source={require("../assets/welcomeBgc.jpg")}
@@ -16,8 +16,25 @@ function WelcomeScreen({navigation}) {
         <Image source={require("../assets/images/logo.png")} />
         <Text style={styles.titleText}>Buy Verified NFT</Text>
       </View>
-        <AppButton title={'Login'} style={{fontFamily:FONTS.bold,fontSize:SIZES.large, color:colors.denimBlue}} color='lavender' onPress={()=>navigation.navigate('Login')}/>
-        <AppButton title={'Sing Up'} style={{fontFamily:FONTS.bold,fontSize:SIZES.large,color:colors.white}} onPress={()=>navigation.navigate('Register')}/>
+      <AppButton
+        title={"Login"}
+        style={{
+          fontFamily: FONTS.bold,
+          fontSize: SIZES.large,
+          color: colors.denimBlue,
+        }}
+        color="lavender"
+        onPress={() => navigation.navigate("Login")}
+      />
+      <AppButton
+        title={"Sing Up"}
+        style={{
+          fontFamily: FONTS.bold,
+          fontSize: SIZES.large,
+          color: colors.white,
+        }}
+        onPress={() => navigation.navigate("Register")}
+      />
     </ImageBackground>
   );
 }
@@ -34,9 +51,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   titleText: {
-    fontFamily: FONTS.medium,
+    fontFamily: FONTS.semiBold,
     fontSize: SIZES.medium,
-    color: colors.babyBlue,
+    color: colors.black,
   },
 });
 

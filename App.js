@@ -6,7 +6,7 @@ import Home from "./app/screens/Home";
 import Details from "./app/screens/Details";
 import myTheme from "./app/navigation/navigationTheme";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
-import TestScreen from './app/screens/TestScreen';
+import TestScreen from "./app/screens/TestScreen";
 import LoginScreen from "./app/screens/LoginScreen";
 
 const Stack = createStackNavigator();
@@ -21,17 +21,16 @@ export default function App() {
   });
   if (!loaded) return null;
   return (
-    // <NavigationContainer theme={myTheme}>
-    //   <Stack.Navigator
-    //     screenOptions={{ headerShown: false }}
-    //     initialRouteName="Home"
-    //   >
-    //     <Stack.Screen name="Home" component={Home} />
-    //     <Stack.Screen name="Details" component={Details} />
-    //     <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
-    //   </Stack.Navigator>
-    // </NavigationContainer>
-    <LoginScreen />
-  
+    <NavigationContainer theme={myTheme}>
+      <Stack.Navigator
+        screenOptions={{ headerShown: false }}
+        initialRouteName="WelcomeScreen"
+      >
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }

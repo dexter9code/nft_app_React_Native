@@ -54,7 +54,7 @@ function LoginScreen({ navigation }) {
           title={"LogIn"}
           borderRadius={25}
           style={styles.loginButton}
-          onPress={() => console.log("bitch")}
+          onPress={()=> navigation.navigate('Home')}
         />
       </View>
     </SafeAreaView>
