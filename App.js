@@ -8,6 +8,8 @@ import myTheme from "./app/navigation/navigationTheme";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import TestScreen from "./app/screens/TestScreen";
 import LoginScreen from "./app/screens/LoginScreen";
+import AccountScreen from "./app/screens/AccountScreen";
+import { HomeHeader } from "./app/components";
 
 const Stack = createStackNavigator();
 
@@ -30,6 +32,8 @@ export default function App() {
         <Stack.Screen name="Details" component={Details} />
         <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Account" component={AccountScreen} />
+        <Stack.Screen name="HomeHeader" component={HomeHeader} />
       </Stack.Navigator>
     </NavigationContainer>
   );

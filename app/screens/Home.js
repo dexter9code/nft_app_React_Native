@@ -5,7 +5,7 @@ import { COLORS, NFTData } from "../constants";
 import { HomeHeader, NFTCard, AppStatusBar } from "../components";
 import colors from "../config/colors";
 
-function Home(props) {
+function Home({ navigation }) {
   const [nft, setNft] = useState(NFTData);
 
   const handleSearch = (value) => {
@@ -30,7 +30,7 @@ function Home(props) {
             renderItem={({ item }) => <NFTCard data={item} />}
             keyExtractor={(item) => item.id}
             showsVerticalScrollIndicator={false}
-            ListHeaderComponent={<HomeHeader onSearch={handleSearch} />}
+            ListHeaderComponent={<HomeHeader onSearch={handleSearch} onpress={()=>navigation.navigate('Account')}/>}
           />
         </View>
         <View style={styles.backgroundScreen}>

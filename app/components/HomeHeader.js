@@ -1,19 +1,28 @@
-import { Text, StyleSheet, View, Image, TextInput } from "react-native";
+import {
+  Text,
+  StyleSheet,
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 
 import colors from "../config/colors";
 import { COLORS, FONTS, SHADOWS, SIZES, assets } from "../constants";
 
-function HomeHeader({ onSearch }) {
+function HomeHeader({ onSearch, onpress }) {
   return (
     <View style={styles.container}>
       <View style={styles.subContainer}>
         <Image source={assets.logo} resizeMode="contain" style={styles.image} />
         <View style={{ width: 45, height: 45 }}>
-          <Image
-            source={assets.person01}
-            resizeMode="contain"
-            style={{ width: "100%", height: "100%" }}
-          />
+          <TouchableOpacity onPress={onpress}>
+            <Image
+              source={assets.person01}
+              resizeMode="contain"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </TouchableOpacity>
           <Image
             source={assets.badge}
             resizeMode="contain"
